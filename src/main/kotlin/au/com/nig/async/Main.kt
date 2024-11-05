@@ -40,9 +40,10 @@ private fun buildBody(i: Int): String = TODO()
 private fun buildRequest(
     body: String
 ): HttpRequest = HttpRequest.newBuilder()
-    .POST(HttpRequest.BodyPublishers.ofString(body))
+//    .POST(HttpRequest.BodyPublishers.ofString(body))
+    .GET()
     .uri(URI.create(TODO()))
-    .setHeader("Authorization", "Some Bearer ?")
+    .setHeader("Authorization", "Basic TOKEN")
     .setHeader("Content-Type", "application/json")
     .build()
 
